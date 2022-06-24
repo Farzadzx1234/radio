@@ -8,9 +8,6 @@
     "install-service": "sudo yarn add -g forever forever-service && sudo forever-service install discord-radio-bot src/Main.js",
     "delete-service": "sudo yarn add -g forever forever-service && sudo forever-service delete discord-radio-bot"
   },
-  "engines": {
-    "node": "x"
-  },
   "author": {
     "name": "Malte Linke",
     "email": "malte.linke.ml@gmail.com",
