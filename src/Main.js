@@ -8,7 +8,7 @@ require('./Logo');
 // inject ffmpeg
 require('ffmpeg-inject');
 
-const client = new Eris.Client(config.discord.token);
+const client = new Eris.Client(process.env.token);
 // connect client
 client.connect();
 
@@ -37,7 +37,7 @@ client.once("ready", () => {
     // apply title data
     radio.on('title', title => {
       console.log(`[Info]`, `Now playing: ${title}`);
-      client.editStatus("online", { name: title, type: 2 })
+      client.editStatus("dnd", { name: title, type: 2 })
     });
 
     // play stream data
@@ -51,7 +51,7 @@ client.once("ready", () => {
     radio.on('empty', () => {
       console.log(`[Warning]`, `Stream does not support Icecast. Stream title will not be shown.`);
 
-      client.editStatus("online", { name: 'Music', type: 2 })
+      client.editStatus("dnd", { name: 'Music', type: 2 })
 
       connection.play(config.radio.stream, { inlineVolume: true });
       connection.setVolume(config.radio.volume / 100);

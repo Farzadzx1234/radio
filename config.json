@@ -1,11 +1,11 @@
 {
   "radio": {
-    "stream": "YOUR_RADIO_URL",
-    "volume": 10
+    "stream": "https://streams.ilovemusic.de/iloveradio14.mp3", 
+    "volume": 100
   },
 
   "discord": {
-    "token": "YOUR_BOT_TOKEN",
-    "channel": "YOUR_CHANNEL_ID"
+    "token": "process.env.token",
+    "channel": "989817603088338945"
   }
 }
